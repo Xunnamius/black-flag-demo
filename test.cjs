@@ -14,13 +14,9 @@ describe('myctl (root)', () => {
   it('emits expected output when called with no arguments', async () => {
     expect.hasAssertions();
 
-    const logSpy = jest
-      .spyOn(console, 'log')
-      .mockImplementation(() => undefined);
+    const logSpy = jest.spyOn(console, 'log').mockImplementation(() => undefined);
 
-    const errorSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => undefined);
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => undefined);
 
     await run();
 
@@ -31,13 +27,9 @@ describe('myctl (root)', () => {
   it('emits expected output when called with unknown arguments', async () => {
     expect.hasAssertions();
 
-    const logSpy = jest
-      .spyOn(console, 'log')
-      .mockImplementation(() => undefined);
+    const logSpy = jest.spyOn(console, 'log').mockImplementation(() => undefined);
 
-    const errorSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => undefined);
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => undefined);
 
     await run('--unknown');
     await run('unknown');

@@ -43,6 +43,12 @@ You don't need to install this demo to use it. You can invoke it directly:
 npx -p @black-flag/demo myctl init --lang 'node' --version=21.1
 ```
 
+And see pretty debug text like so:
+
+```shell
+DEBUG='*' npx -p @black-flag/demo myctl init --lang 'node' --version=21.1
+```
+
 If you do want to install the CLI for some reason, you should install it
 globally:
 
@@ -117,19 +123,30 @@ key][x-repo-all-contributors-emojis]):
 This project follows the [all-contributors][x-repo-all-contributors]
 specification. Contributions of any kind welcome!
 
-[x-badge-blm-image]: https://xunn.at/badge-blm "Join the movement!"
+[x-badge-blm-image]: https://xunn.at/badge-blm 'Join the movement!'
 [x-badge-blm-link]: https://xunn.at/donate-blm
-[x-badge-codecov-image]: https://img.shields.io/codecov/c/github/Xunnamius/black-flag-demo/main?style=flat-square&token=HWRIOBAAPW "Is this package well-tested?"
+[x-badge-codecov-image]:
+  https://img.shields.io/codecov/c/github/Xunnamius/black-flag-demo/main?style=flat-square&token=HWRIOBAAPW
+  'Is this package well-tested?'
 [x-badge-codecov-link]: https://codecov.io/gh/Xunnamius/black-flag-demo
-[x-badge-lastcommit-image]: https://img.shields.io/github/last-commit/xunnamius/black-flag-demo?style=flat-square "Latest commit timestamp"
-[x-badge-license-image]: https://img.shields.io/npm/l/@black-flag/demo?style=flat-square "This package's source license"
-[x-badge-license-link]: https://github.com/Xunnamius/black-flag-demo/blob/main/LICENSE
+[x-badge-lastcommit-image]:
+  https://img.shields.io/github/last-commit/xunnamius/black-flag-demo?style=flat-square
+  'Latest commit timestamp'
+[x-badge-license-image]:
+  https://img.shields.io/npm/l/@black-flag/demo?style=flat-square
+  "This package's source license"
+[x-badge-license-link]:
+  https://github.com/Xunnamius/black-flag-demo/blob/main/LICENSE
 [x-badge-repo-link]: https://github.com/xunnamius/black-flag-demo
-[x-badge-semanticrelease-image]: https://xunn.at/badge-semantic-release "This repo practices continuous integration and deployment!"
-[x-badge-semanticrelease-link]: https://github.com/semantic-release/semantic-release
+[x-badge-semanticrelease-image]:
+  https://xunn.at/badge-semantic-release
+  'This repo practices continuous integration and deployment!'
+[x-badge-semanticrelease-link]:
+  https://github.com/semantic-release/semantic-release
 [x-repo-all-contributors]: https://github.com/all-contributors/all-contributors
 [x-repo-all-contributors-emojis]: https://allcontributors.org/docs/en/emoji-key
-[x-repo-choose-new-issue]: https://github.com/xunnamius/black-flag-demo/issues/new/choose
+[x-repo-choose-new-issue]:
+  https://github.com/xunnamius/black-flag-demo/issues/new/choose
 [x-repo-contributing]: /CONTRIBUTING.md
 [x-repo-license]: ./LICENSE
 [x-repo-pr-compare]: https://github.com/xunnamius/black-flag-demo/compare
