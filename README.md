@@ -36,7 +36,7 @@ If you want a more advanced example of a CLI written with Black Flag but with
 [debug](https://npm.im/debug)-based custom error handling and
 [listr2](https://npm.im/listr2) + [inquirer](https://npm.im/inquirer) output
 support, check out
-[xunnctl](https://github.com/Xunnamius/xunnctl/blob/main/src/configure.ts);
+[xunnctl](https://github.com/Xunnamius/xunnctl/blob/main/src/configure.ts).
 
 ## Usage
 
