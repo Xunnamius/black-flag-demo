@@ -32,6 +32,12 @@ tools declaratively and simply.
 This repository corresponds to the [usage tutorial featured in the Black Flag
 documentation][2].
 
+If you want a more advanced example of a CLI written with Black Flag but with
+[debug](https://npm.im/debug)-based custom error handling and
+[listr2](https://npm.im/listr2) + [inquirer](https://npm.im/inquirer) output
+support, check out
+[xunnctl](https://github.com/Xunnamius/xunnctl/blob/main/src/configure.ts);
+
 ## Usage
 
 > For a more in-depth look, see [the tutorial][2] corresponding to this demo
