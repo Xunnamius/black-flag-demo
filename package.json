@@ -11,10 +11,10 @@
     "release": "NPM_TOKEN=\"$(npx --yes dotenv-cli -p NPM_TOKEN)\" GH_TOKEN=\"$(npx --yes dotenv-cli -p GITHUB_TOKEN)\" GIT_AUTHOR_NAME=\"$(npx --yes dotenv-cli -p GIT_AUTHOR_NAME)\" GIT_COMMITTER_NAME=\"$(npx --yes dotenv-cli -p GIT_COMMITTER_NAME)\" GIT_AUTHOR_EMAIL=\"$(npx --yes dotenv-cli -p GIT_AUTHOR_EMAIL)\" GIT_COMMITTER_EMAIL=\"$(npx --yes dotenv-cli -p GIT_COMMITTER_EMAIL)\" npx --no-install semantic-release --no-ci --extends \"$(pwd)/release.config.cjs\""
   },
   "dependencies": {
-    "@black-flag/core": "^1.1.2"
+    "@black-flag/core": "^1.2.5"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-import-attributes": "^7.23.3",
+    "@babel/plugin-syntax-import-attributes": "^7.24.6",
     "jest": "^29.7.0"
   },
   "publishConfig": {
