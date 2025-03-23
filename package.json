@@ -1,13 +1,13 @@
 {
   "name": "@black-flag/demo",
   "version": "1.1.1",
-  "homepage": "https://github.com/Xunnamius/black-flag-demo-demo#readme",
+  "homepage": "https://github.com/Xunnamius/black-flag-demo#readme",
   "bugs": {
-    "url": "https://github.com/Xunnamius/black-flag-demo-demo/issues"
+    "url": "https://github.com/Xunnamius/black-flag-demo/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Xunnamius/black-flag-demo-demo.git"
+    "url": "git+https://github.com/Xunnamius/black-flag-demo.git"
   },
   "license": "MIT",
   "author": "Xunnamius",
@@ -27,21 +27,18 @@
     "clean": "symbiote clean --env NODE_NO_WARNINGS=1",
     "format": "symbiote format --env NODE_NO_WARNINGS=1 --hush",
     "info": "symbiote project info --env NODE_NO_WARNINGS=1",
-    "lint": "symbiote lint --env NODE_NO_WARNINGS=1 --hush",
     "lint:project": "symbiote project lint --env NODE_NO_WARNINGS=1",
     "list-tasks": "symbiote list-tasks --env NODE_NO_WARNINGS=1 --scope this-package",
     "prepare": "symbiote project prepare --env NODE_NO_WARNINGS=1",
     "release": "symbiote release --env NODE_NO_WARNINGS=1 --skip-missing",
     "renovate": "symbiote project renovate --env NODE_NO_WARNINGS=1 --github-reconfigure-repo --regenerate-assets --assets-preset cli",
-    "test": "symbiote test --env NODE_NO_WARNINGS=1 --coverage --bare --options --testMatch test.cjs"
+    "test": "symbiote test --env NODE_NO_WARNINGS=1 --coverage --bare --options test.cjs"
   },
   "dependencies": {
     "@black-flag/core": "^2.0.2"
   },
   "devDependencies": {
-    "@-xun/symbiote": "^3.6.0",
-    "@babel/plugin-syntax-import-attributes": "^7.26.0",
-    "jest": "^29.7.0"
+    "@-xun/symbiote": "^3.6.0"
   },
   "engines": {
     "node": "^18.20.0 || ^20.18.0 || ^22.12.0 || >=23.3.0"
