@@ -2,15 +2,20 @@
 
 import { $executionContext } from '@black-flag/core';
 
-// For pure JS ESM projects, I prefer the following syntax for my command files
-// instead of using individual exports like in the previous examples:
+// See ./commands/remote/add.js for my preferred export syntax/style.
 
 /**
- * @type {import('@black-flag/core').ImportedConfigurationModule<{ name?: string }>}
+ * @type {import('@black-flag/core').ChildConfiguration<{ name?: string }>}
  */
 const configuration = {
   command: '$0 [name]',
   description: 'show details about a remote (or all remotes)',
+
+  builder(blackFlag) {
+    blackFlag.positional('name', {
+      description: 'The name of the remote to show'
+    });
+  },
 
   handler({ name, [$executionContext]: context }) {
     if (name) {
@@ -22,12 +27,6 @@ const configuration = {
     console.log(
       `(saw special state from execution context: ${context.somethingSpecial})`
     );
-  },
-
-  builder(bf) {
-    bf.positional('name', {
-      description: 'The name of the remote to show'
-    });
   }
 };
 

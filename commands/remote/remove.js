@@ -1,22 +1,24 @@
 // @ts-check
 
-/**
- * @type {import('@black-flag/core').Configuration<{ name: string }>['handler']}
- */
-export const handler = function ({ name, id }) {
-  console.log(`Deleted remote "${name}"`);
-};
+// See ./commands/remote/add.js for my preferred export syntax/style.
 
 /**
- * @type {import('@black-flag/core').Configuration<{ name: string }>['command']}
+ * @type {import('@black-flag/core').ChildConfiguration<{ name: string }>['command']}
  */
 export const command = '$0 <name>';
 
 /**
- * @type {import('@black-flag/core').Configuration<{ name: string }>['builder']}
+ * @type {import('@black-flag/core').ChildConfiguration<{ name: string }>['builder']}
  */
-export const builder = function (bf) {
-  bf.positional('name', {
+export const builder = function (blackFlag) {
+  blackFlag.positional('name', {
     description: 'The name of the remote to permanently delete'
   });
+};
+
+/**
+ * @type {import('@black-flag/core').ChildConfiguration<{ name: string }>['handler']}
+ */
+export const handler = function ({ name }) {
+  console.log(`Deleted remote "${name}"`);
 };

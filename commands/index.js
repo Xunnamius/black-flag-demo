@@ -1,29 +1,27 @@
 // @ts-check
 
-/**
- * This little comment gives us intellisense support :)
- *
- * Also note how we're using the `export const X = function(...) { ... }` syntax
- * instead of the streamlined `export function X(...) { ... }` syntax. Both of
- * these syntaxes are correct, however JSDoc does not support using "@type" on
- * the latter form for some reason.
- *
- * @type {import('@black-flag/core').Configuration['builder']}
- */
-export const builder = function (blackFlag) {
-  return blackFlag.strict(false);
-};
+// These @type comments give us intellisense support, but they're optional 🙂
+// See ./commands/remote/add.js for my preferred export syntax/style.
 
 /**
- * @type {import('@black-flag/core').RootConfiguration['handler']}
+ * @type {Extract<import('@black-flag/core').Configuration['builder'],
+ * Function>}
  */
-export const handler = function (argv) {
+export function builder(blackFlag) {
+  return blackFlag.strict(false);
+}
+
+/**
+ * @type {Extract<import('@black-flag/core').RootConfiguration['handler'],
+ * Function>}
+ */
+export function handler(argv) {
   console.log('Ran root command handler');
-};
+}
 
 /**
  * Note that `usage` is just a freeform string used in help text. The `command`
- * export, on the other hand, supports the yargs DSL for defining positional
+ * export, on the other hand, supports the Yargs DSL for defining positional
  * parameters and the like.
  *
  * @type {import('@black-flag/core').RootConfiguration['usage']}
