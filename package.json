@@ -1,23 +1,53 @@
 {
   "name": "@black-flag/demo",
   "version": "1.1.1",
+  "homepage": "https://github.com/Xunnamius/black-flag-demo-demo#readme",
+  "bugs": {
+    "url": "https://github.com/Xunnamius/black-flag-demo-demo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xunnamius/black-flag-demo-demo.git"
+  },
   "license": "MIT",
+  "author": "Xunnamius",
   "type": "module",
   "bin": {
     "myctl": "./cli.js"
   },
+  "files": [
+    "/commands",
+    "/cli.js",
+    "/LICENSE",
+    "/package.json",
+    "/README.md"
+  ],
   "scripts": {
-    "install-deps": "npm install --no-save https://xunn.at/semantic-release-atam@22.0.7 @semantic-release/exec @semantic-release/git debug @xunnamius/conventional-changelog-projector",
-    "release": "NPM_TOKEN=\"$(npx --yes dotenv-cli -p NPM_TOKEN)\" GH_TOKEN=\"$(npx --yes dotenv-cli -p GITHUB_TOKEN)\" GIT_AUTHOR_NAME=\"$(npx --yes dotenv-cli -p GIT_AUTHOR_NAME)\" GIT_COMMITTER_NAME=\"$(npx --yes dotenv-cli -p GIT_COMMITTER_NAME)\" GIT_AUTHOR_EMAIL=\"$(npx --yes dotenv-cli -p GIT_AUTHOR_EMAIL)\" GIT_COMMITTER_EMAIL=\"$(npx --yes dotenv-cli -p GIT_COMMITTER_EMAIL)\" npx --no-install semantic-release --no-ci --extends \"$(pwd)/release.config.cjs\""
+    "build:changelog": "symbiote build changelog --env NODE_NO_WARNINGS=1",
+    "clean": "symbiote clean --env NODE_NO_WARNINGS=1",
+    "format": "symbiote format --env NODE_NO_WARNINGS=1 --hush",
+    "info": "symbiote project info --env NODE_NO_WARNINGS=1",
+    "lint": "symbiote lint --env NODE_NO_WARNINGS=1 --hush",
+    "lint:project": "symbiote project lint --env NODE_NO_WARNINGS=1",
+    "list-tasks": "symbiote list-tasks --env NODE_NO_WARNINGS=1 --scope this-package",
+    "prepare": "symbiote project prepare --env NODE_NO_WARNINGS=1",
+    "release": "symbiote release --env NODE_NO_WARNINGS=1 --skip-missing",
+    "renovate": "symbiote project renovate --env NODE_NO_WARNINGS=1 --github-reconfigure-repo --regenerate-assets --assets-preset cli",
+    "test": "symbiote test --env NODE_NO_WARNINGS=1 --coverage --bare --options --testMatch test.cjs"
   },
   "dependencies": {
     "@black-flag/core": "^1.2.5"
   },
   "devDependencies": {
+    "@-xun/symbiote": "^3.6.0",
     "@babel/plugin-syntax-import-attributes": "^7.24.6",
     "jest": "^29.7.0"
   },
+  "engines": {
+    "node": "^18.20.0 || ^20.18.0 || ^22.12.0 || >=23.3.0"
+  },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
