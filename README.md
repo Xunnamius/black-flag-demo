@@ -184,11 +184,25 @@ key][x-repo-all-contributors-emojis]):
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 
-<table></table>
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://xunn.io/"><img src="https://avatars.githubusercontent.com/u/656017?v=4?s=100" width="100px;" alt="Bernard"/><br /><sub><b>Bernard</b></sub></a><br /><a href="#infra-Xunnamius" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Xunnamius/black-flag-demo/commits?author=Xunnamius" title="Code">💻</a> <a href="https://github.com/Xunnamius/black-flag-demo/commits?author=Xunnamius" title="Documentation">📖</a> <a href="#maintenance-Xunnamius" title="Maintenance">🚧</a> <a href="https://github.com/Xunnamius/black-flag-demo/commits?author=Xunnamius" title="Tests">⚠️</a> <a href="https://github.com/Xunnamius/black-flag-demo/pulls?q=is%3Apr+reviewed-by%3AXunnamius" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td align="center" size="13px" colspan="7">
+        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
+          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions</a>
+        </img>
+      </td>
+    </tr>
+  </tfoot>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- remark-ignore-end -->
 
@@ -206,10 +220,6 @@ specification. Contributions of any kind welcome!
   https://img.shields.io/codecov/c/github/Xunnamius/black-flag-demo/main?style=flat-square&token=HWRIOBAAPW&flag=package.main_root
   'Is this package well-tested?'
 [x-badge-codecov-link]: https://codecov.io/gh/Xunnamius/black-flag-demo
-[x-badge-downloads-image]:
-  https://img.shields.io/npm/dm/@black-flag/demo?style=flat-square
-  'Number of times this package has been downloaded per month'
-[x-badge-downloads-link]: https://npmtrends.com/@black-flag/demo
 [x-badge-lastcommit-image]:
   https://img.shields.io/github/last-commit/Xunnamius/black-flag-demo?style=flat-square
   'Latest commit timestamp'
@@ -218,18 +228,12 @@ specification. Contributions of any kind welcome!
   "This package's source license"
 [x-badge-license-link]:
   https://github.com/Xunnamius/black-flag-demo/blob/main/LICENSE
-[x-badge-npm-image]:
-  https://xunn.at/npm-pkg-version/@black-flag/demo
-  'Install this package using npm or yarn!'
-[x-badge-npm-link]: https://npm.im/@black-flag/demo
 [x-badge-repo-link]: https://github.com/Xunnamius/black-flag-demo
 [x-badge-semanticrelease-image]:
   https://xunn.at/badge-semantic-release
   'This repo practices continuous integration and deployment!'
 [x-badge-semanticrelease-link]:
   https://github.com/semantic-release/semantic-release
-[x-pkg-cjs-mojito]:
-  https://dev.to/jakobjingleheimer/configuring-commonjs-es-modules-for-nodejs-12ed#publish-only-a-cjs-distribution-with-property-exports
 [x-pkg-dual-package-hazard]:
   https://nodejs.org/api/packages.html#dual-package-hazard
 [x-pkg-esm-wine]:
@@ -250,8 +254,6 @@ specification. Contributions of any kind welcome!
 [x-repo-choose-new-issue]:
   https://github.com/Xunnamius/black-flag-demo/issues/new/choose
 [x-repo-contributing]: /CONTRIBUTING.md
-[x-repo-contributors]: /README.md#contributors
-[x-repo-docs]: docs
 [x-repo-license]: ./LICENSE
 [x-repo-package-json]: package.json
 [x-repo-pr-compare]: https://github.com/Xunnamius/black-flag-demo/compare
