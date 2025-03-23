@@ -27,3 +27,4 @@ export function handler(argv) {
  * @type {import('@black-flag/core').RootConfiguration['usage']}
  */
 export const usage = 'Usage: $0 command [options]\n\nCustom description here.';
+export const name = 'myctl';
