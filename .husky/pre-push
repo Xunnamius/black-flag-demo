@@ -15,23 +15,17 @@ echo 'husky-hook::pre-push: checking for commits that should not be pushed...'
 log=$(git log HEAD --oneline --not --remotes)
 set +e
 incompleteCommitsGrep=$(echo "$log" | grep -q -i -e 'mergeme' -e '\[WIP\]' -e '\[NOPUSH\]'; echo $?)
-set -e
 
 # ? In the below lines, 'x' is passed as the "zero parameter" so "$@" spits out
 # ? the right stuff. Stuff like this won't be an issue when we switch this to JS
 
 interestingXxxFiles=$(git ls-tree -r --full-tree --name-only HEAD | grep -vE '(^|/)(\.husky|assets/templates/husky)/' | grep -vE '\.snap$')
-set +e
 incompleteXxxFilesGrep=$(echo "$interestingXxxFiles" | xargs -P 0 sh -c 'if grep -q -F -e "XXX: " "$@"; then exit 255; else true; fi' 'x' 1>/dev/null 2>&1; echo $?)
-set -e
 
 interestingMdFiles=$(echo "$interestingXxxFiles" | grep '\.md$' | grep -vE '(^|/)(src|test|docs)/' | grep -vE '/CHANGELOG.md$')
-set +e
 incompleteMdFilesGrep=$(echo "$interestingMdFiles" | xargs -P 0 sh -c 'if grep -q -i -F -e "-✄-" "$@"; then exit 255; else true; fi' 'x' 1>/dev/null 2>&1; echo $?)
-set -e
 
 interestingTestFiles=$(echo "$interestingXxxFiles" | grep '\.test\.ts$')
-set +e
 incompleteTestFilesGrep=$(echo "$interestingTestFiles" | xargs -P 0 sh -c 'if grep -q -i -E -e "(it|test|describe)\.only\(" "$@"; then exit 255; else true; fi' 'x' 1>/dev/null 2>&1; echo $?)
 set -e
 
