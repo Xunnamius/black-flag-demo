@@ -36,7 +36,7 @@
     "test": "symbiote test --env NODE_NO_WARNINGS=1 --coverage --bare --options --testMatch test.cjs"
   },
   "dependencies": {
-    "@black-flag/core": "^1.2.5"
+    "@black-flag/core": "^2.0.2"
   },
   "devDependencies": {
     "@-xun/symbiote": "^3.6.0",
