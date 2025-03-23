@@ -64,7 +64,7 @@ documentation][2].
 You don't need to install this demo to use it. You can invoke it directly:
 
 ```shell
-npx -p @black-flag/demo myctl init --lang node --version=21.1
+npx -p @black-flag/demo myctl init --lang node --version=22.12
 ```
 
 If you do want to install the CLI for some reason, you should install it
@@ -85,7 +85,7 @@ npx -p @black-flag/demo myctl --help
 And see pretty debug insights like so:
 
 ```shell
-DEBUG='*' npx -p @black-flag/demo myctl init --lang node --version=21.1
+DEBUG='*' npx -p @black-flag/demo myctl init --lang node --version=22.12
 ```
 
 <!-- symbiote-template-region-start 5 -->
